@@ -595,6 +595,7 @@ export const resumeService = {
 	update: async (input: {
 		id: string;
 		userId: string;
+		isAnonymous?: boolean;
 		name?: string;
 		slug?: string;
 		tags?: string[];
@@ -698,7 +699,7 @@ export const resumeService = {
 			});
 
 		// Data edits refresh this editing session's version (see saveSessionVersion).
-		if (input.data !== undefined && !input.skipAutoSnapshot) {
+		if (input.data !== undefined && !input.skipAutoSnapshot && !input.isAnonymous) {
 			await saveSessionVersion({
 				resumeId: resume.id,
 				userId: input.userId,

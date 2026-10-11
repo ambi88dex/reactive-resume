@@ -1,10 +1,11 @@
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { createFileRoute, redirect } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 import z from "zod";
 import { EditorShell } from "./-components/editor-shell";
 import { useBuilderResumeUpdateSubscription, useResumeCleanup, useResumeStore } from "@/features/resume/builder/draft";
 import { EDITOR_MODES } from "@/features/resume/editor/store";
+import { requireSession } from "@/libs/auth/require-session";
 import { orpc } from "@/libs/orpc/client";
 import { createNoindexFollowMeta } from "@/libs/seo";
 
@@ -25,10 +26,7 @@ const searchSchema = z.object({
 export const Route = createFileRoute("/builder/$resumeId")({
 	component: RouteComponent,
 	validateSearch: searchSchema,
-	beforeLoad: ({ context, location }) => {
-		if (!context.session) throw redirect({ to: "/auth/login", search: { callbackURL: location.href }, replace: true });
-		return { session: context.session };
-	},
+	beforeLoad: ({ context, location }) => requireSession(context, location),
 	loader: async ({ params, context }) => {
 		const resume = await context.queryClient.ensureQueryData(
 			orpc.resume.getById.queryOptions({ input: { id: params.resumeId } }),

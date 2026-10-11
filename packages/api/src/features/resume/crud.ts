@@ -148,6 +148,7 @@ export const crudRouter = {
 			resumeService.update({
 				id: input.id,
 				userId: context.user.id,
+				isAnonymous: context.isAnonymous,
 				...(input.name !== undefined ? { name: input.name } : {}),
 				...(input.sessionId !== undefined ? { sessionId: input.sessionId } : {}),
 				...(input.slug !== undefined ? { slug: input.slug } : {}),

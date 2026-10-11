@@ -63,7 +63,9 @@ export const coverLettersRouter = {
 		.input(coverLetterDto.update.input)
 		.use(resumeMutationRateLimit)
 		.output(coverLetterDto.update.output)
-		.handler(({ context, input }) => coverLetterService.update({ ...input, userId: context.user.id })),
+		.handler(({ context, input }) =>
+			coverLetterService.update({ ...input, userId: context.user.id, isAnonymous: context.isAnonymous }),
+		),
 	refreshStyle: protectedProcedure
 		.route({
 			method: "POST",

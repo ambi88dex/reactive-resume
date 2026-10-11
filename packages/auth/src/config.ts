@@ -8,7 +8,7 @@ import { passkey } from "@better-auth/passkey";
 import { compare, hash } from "bcryptjs";
 import { APIError, betterAuth } from "better-auth";
 import { createAuthMiddleware } from "better-auth/api";
-import { admin, jwt, openAPI } from "better-auth/plugins";
+import { admin, anonymous, jwt, openAPI } from "better-auth/plugins";
 import { genericOAuth } from "better-auth/plugins/generic-oauth";
 import { twoFactor } from "better-auth/plugins/two-factor";
 import { username } from "better-auth/plugins/username";
@@ -184,8 +184,30 @@ const getAuthConfig = () => {
 			enabled: isRateLimitEnabled,
 		},
 
+		databaseHooks: {
+			user: {
+				create: {
+					before: (user) => {
+						if (user.username) return Promise.resolve(undefined);
+						const id = generateId().slice(0, 8).toLowerCase();
+						const guestUsername = `guest-${id}`;
+						return Promise.resolve({
+							data: {
+								...user,
+								username: guestUsername,
+								displayUsername: guestUsername,
+							},
+						});
+					},
+				},
+			},
+		},
+
 		hooks: {
 			before: createAuthMiddleware(async (ctx) => {
+				if (ctx.path === "/sign-in/anonymous" && env.FLAG_DISABLE_GUEST_LOGIN) {
+					throw new APIError("FORBIDDEN", { message: "Guest login is disabled." });
+				}
 				if (ctx.path === "/oauth2/delete-consent") {
 					const origin = ctx.headers?.get("origin");
 					if ((origin && !TRUSTED_ORIGINS.includes(origin)) || ctx.headers?.get("sec-fetch-site") === "cross-site") {
@@ -307,6 +329,12 @@ const getAuthConfig = () => {
 					type: "string",
 					required: true,
 				},
+				isAnonymous: {
+					type: "boolean",
+					required: false,
+					defaultValue: false,
+					input: false,
+				},
 				timezone: {
 					type: "string",
 					required: false,
@@ -414,6 +442,25 @@ const getAuthConfig = () => {
 				displayUsernameNormalization: (value) => toUsername(value),
 				usernameValidator: (username) => /^[a-z0-9._-]+$/.test(username),
 				validationOrder: { username: "post-normalization", displayUsername: "post-normalization" },
+			}),
+			anonymous({
+				emailDomainName: "reactive-resume.local",
+				generateName: () => "Guest",
+				onLinkAccount: async ({ anonymousUser, newUser }) => {
+					const anonUserId = anonymousUser.user.id;
+					const newUserId = newUser.user.id;
+					if (anonUserId === newUserId) return;
+
+					await db.update(schema.resume).set({ userId: newUserId }).where(eq(schema.resume.userId, anonUserId));
+					await db
+						.update(schema.coverLetter)
+						.set({ userId: newUserId })
+						.where(eq(schema.coverLetter.userId, anonUserId));
+					await db
+						.update(schema.application)
+						.set({ userId: newUserId })
+						.where(eq(schema.application.userId, anonUserId));
+				},
 			}),
 			...(env.BETTER_AUTH_API_KEY
 				? [dash({ apiKey: env.BETTER_AUTH_API_KEY, activityTracking: { enabled: true } })]
