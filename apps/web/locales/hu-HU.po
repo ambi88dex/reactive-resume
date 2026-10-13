@@ -2892,7 +2892,7 @@ msgstr "Tovább"
 
 #: src/features/auth/pages/login.tsx
 msgid "Continue as guest"
-msgstr ""
+msgstr "Folytatás vendégként"
 
 #: src/features/homepage/sections.tsx
 msgid "Contribute code"
@@ -3120,7 +3120,7 @@ msgstr "Nem sikerült csatlakozni. Ellenőrizze a kulcsot, és próbálja újra.
 
 #: src/features/auth/pages/login.tsx
 msgid "Couldn't continue as a guest. Please try again."
-msgstr ""
+msgstr "Nem sikerült vendégként folytatni. Kérjük, próbáld újra."
 
 #: src/features/career/offers.tsx
 msgid "Couldn't copy the questions. Select the text and copy it manually."
@@ -3518,7 +3518,7 @@ msgstr "Először készítsen önéletrajzot, majd kérdezzen rá."
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "Create account"
-msgstr ""
+msgstr "Fiók létrehozása"
 
 #: src/features/auth/pages/consent.tsx
 msgid "Create and change your documents and job applications."
@@ -12909,7 +12909,7 @@ msgstr "Mindennel naprakész vagy"
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "You're using a guest account"
-msgstr ""
+msgstr "Vendégfiókot használsz"
 
 #. Hero headline, line 2 of 4: “Everything / you’ve done, / on one / page.”
 #: src/features/homepage/hero.tsx
@@ -13168,7 +13168,7 @@ msgstr "A kétperces bemutatkozásod"
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "Your work is lost when you sign out or the session ends. Create an account or sign in to keep your resumes, cover letters and applications."
-msgstr ""
+msgstr "A munkád elvész, ha kijelentkezel vagy lejár a munkamenet. Hozz létre fiókot vagy jelentkezz be, hogy megtartsd az önéletrajzaidat, kísérőleveleidet és jelentkezéseidet."
 
 #: src/features/homepage/sections.tsx
 msgid "Yours"

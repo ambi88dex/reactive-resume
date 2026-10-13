@@ -2892,7 +2892,7 @@ msgstr "Devam et"
 
 #: src/features/auth/pages/login.tsx
 msgid "Continue as guest"
-msgstr ""
+msgstr "Misafir olarak devam et"
 
 #: src/features/homepage/sections.tsx
 msgid "Contribute code"
@@ -3120,7 +3120,7 @@ msgstr "Bağlantı kurulamadı. Anahtarı kontrol edip tekrar deneyin."
 
 #: src/features/auth/pages/login.tsx
 msgid "Couldn't continue as a guest. Please try again."
-msgstr ""
+msgstr "Misafir olarak devam edilemedi. Lütfen tekrar deneyin."
 
 #: src/features/career/offers.tsx
 msgid "Couldn't copy the questions. Select the text and copy it manually."
@@ -3518,7 +3518,7 @@ msgstr "Önce bir özgeçmiş oluşturun, sonra sorun."
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "Create account"
-msgstr ""
+msgstr "Hesap oluştur"
 
 #: src/features/auth/pages/consent.tsx
 msgid "Create and change your documents and job applications."
@@ -12909,7 +12909,7 @@ msgstr "Her şeyi gördünüz"
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "You're using a guest account"
-msgstr ""
+msgstr "Misafir hesabı kullanıyorsunuz"
 
 #. Hero headline, line 2 of 4: “Everything / you’ve done, / on one / page.”
 #: src/features/homepage/hero.tsx
@@ -13168,7 +13168,7 @@ msgstr "İki dakikalık tanıtımınız"
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "Your work is lost when you sign out or the session ends. Create an account or sign in to keep your resumes, cover letters and applications."
-msgstr ""
+msgstr "Çıkış yaptığınızda veya oturum sona erdiğinde çalışmalarınız kaybolur. Özgeçmişlerinizi, kapak mektuplarınızı ve başvurularınızı saklamak için hesap oluşturun veya giriş yapın."
 
 #: src/features/homepage/sections.tsx
 msgid "Yours"

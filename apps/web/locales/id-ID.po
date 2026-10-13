@@ -2892,7 +2892,7 @@ msgstr "Lanjutkan"
 
 #: src/features/auth/pages/login.tsx
 msgid "Continue as guest"
-msgstr ""
+msgstr "Lanjutkan sebagai tamu"
 
 #: src/features/homepage/sections.tsx
 msgid "Contribute code"
@@ -3120,7 +3120,7 @@ msgstr "Tidak dapat terhubung. Periksa kuncinya dan coba lagi."
 
 #: src/features/auth/pages/login.tsx
 msgid "Couldn't continue as a guest. Please try again."
-msgstr ""
+msgstr "Tidak dapat melanjutkan sebagai tamu. Silakan coba lagi."
 
 #: src/features/career/offers.tsx
 msgid "Couldn't copy the questions. Select the text and copy it manually."
@@ -3518,7 +3518,7 @@ msgstr "Buat resume terlebih dahulu, lalu tanyakan tentangnya."
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "Create account"
-msgstr ""
+msgstr "Buat akun"
 
 #: src/features/auth/pages/consent.tsx
 msgid "Create and change your documents and job applications."
@@ -12909,7 +12909,7 @@ msgstr "Semua sudah terbaru"
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "You're using a guest account"
-msgstr ""
+msgstr "Anda menggunakan akun tamu"
 
 #. Hero headline, line 2 of 4: “Everything / you’ve done, / on one / page.”
 #: src/features/homepage/hero.tsx
@@ -13168,7 +13168,7 @@ msgstr "Perkenalan dua menit Anda"
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "Your work is lost when you sign out or the session ends. Create an account or sign in to keep your resumes, cover letters and applications."
-msgstr ""
+msgstr "Pekerjaan Anda akan hilang saat Anda keluar atau sesi berakhir. Buat akun atau masuk untuk menyimpan resume, surat pengantar, dan lamaran Anda."
 
 #: src/features/homepage/sections.tsx
 msgid "Yours"

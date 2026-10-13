@@ -2892,7 +2892,7 @@ msgstr "চালিয়ে যান"
 
 #: src/features/auth/pages/login.tsx
 msgid "Continue as guest"
-msgstr ""
+msgstr "অতিথি হিসেবে চালিয়ে যান"
 
 #: src/features/homepage/sections.tsx
 msgid "Contribute code"
@@ -3120,7 +3120,7 @@ msgstr "সংযোগ করা যায়নি। কী চেক কর�
 
 #: src/features/auth/pages/login.tsx
 msgid "Couldn't continue as a guest. Please try again."
-msgstr ""
+msgstr "অতিথি হিসেবে চালিয়ে যাওয়া যায়নি। আবার চেষ্টা করুন।"
 
 #: src/features/career/offers.tsx
 msgid "Couldn't copy the questions. Select the text and copy it manually."
@@ -3518,7 +3518,7 @@ msgstr "প্রথমে একটি জীবনবৃত্তান্ত 
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "Create account"
-msgstr ""
+msgstr "অ্যাকাউন্ট তৈরি করুন"
 
 #: src/features/auth/pages/consent.tsx
 msgid "Create and change your documents and job applications."
@@ -12909,7 +12909,7 @@ msgstr "আপনি সব দেখে ফেলেছেন"
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "You're using a guest account"
-msgstr ""
+msgstr "আপনি একটি অতিথি অ্যাকাউন্ট ব্যবহার করছেন"
 
 #. Hero headline, line 2 of 4: “Everything / you’ve done, / on one / page.”
 #: src/features/homepage/hero.tsx
@@ -13168,7 +13168,7 @@ msgstr "আপনার দুই মিনিটের পরিচিতি"
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "Your work is lost when you sign out or the session ends. Create an account or sign in to keep your resumes, cover letters and applications."
-msgstr ""
+msgstr "সাইন আউট করলে বা সেশন শেষ হলে আপনার কাজ হারিয়ে যাবে। আপনার জীবনবৃত্তান্ত, কভার লেটার ও আবেদনগুলো রাখতে একটি অ্যাকাউন্ট তৈরি করুন বা সাইন ইন করুন।"
 
 #: src/features/homepage/sections.tsx
 msgid "Yours"

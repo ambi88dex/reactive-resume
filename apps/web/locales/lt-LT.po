@@ -2892,7 +2892,7 @@ msgstr "Tęsti"
 
 #: src/features/auth/pages/login.tsx
 msgid "Continue as guest"
-msgstr ""
+msgstr "Tęsti kaip svečias"
 
 #: src/features/homepage/sections.tsx
 msgid "Contribute code"
@@ -3120,7 +3120,7 @@ msgstr "Nepavyko prisijungti. Patikrinkite raktą ir bandykite dar kartą."
 
 #: src/features/auth/pages/login.tsx
 msgid "Couldn't continue as a guest. Please try again."
-msgstr ""
+msgstr "Nepavyko tęsti kaip svečiui. Bandykite dar kartą."
 
 #: src/features/career/offers.tsx
 msgid "Couldn't copy the questions. Select the text and copy it manually."
@@ -3518,7 +3518,7 @@ msgstr "Pirmiausia sukurkite gyvenimo aprašymą, tada paklauskite apie tai."
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "Create account"
-msgstr ""
+msgstr "Sukurti paskyrą"
 
 #: src/features/auth/pages/consent.tsx
 msgid "Create and change your documents and job applications."
@@ -12909,7 +12909,7 @@ msgstr "Viskas peržiūrėta"
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "You're using a guest account"
-msgstr ""
+msgstr "Naudojate svečio paskyrą"
 
 #. Hero headline, line 2 of 4: “Everything / you’ve done, / on one / page.”
 #: src/features/homepage/hero.tsx
@@ -13168,7 +13168,7 @@ msgstr "Jūsų dviejų minučių prisistatymas"
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "Your work is lost when you sign out or the session ends. Create an account or sign in to keep your resumes, cover letters and applications."
-msgstr ""
+msgstr "Atsijungus ar pasibaigus sesijai jūsų darbas bus prarastas. Sukurkite paskyrą arba prisijunkite, kad išsaugotumėte gyvenimo aprašymus, motyvacinius laiškus ir paraiškas."
 
 #: src/features/homepage/sections.tsx
 msgid "Yours"

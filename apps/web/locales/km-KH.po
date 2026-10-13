@@ -2892,7 +2892,7 @@ msgstr "បន្ត"
 
 #: src/features/auth/pages/login.tsx
 msgid "Continue as guest"
-msgstr ""
+msgstr "បន្តជាភ្ញៀវ"
 
 #: src/features/homepage/sections.tsx
 msgid "Contribute code"
@@ -3120,7 +3120,7 @@ msgstr "មិនអាចភ្ជាប់បានទេ។ ពិនិត�
 
 #: src/features/auth/pages/login.tsx
 msgid "Couldn't continue as a guest. Please try again."
-msgstr ""
+msgstr "មិនអាចបន្តជាភ្ញៀវបានទេ។ សូមព្យាយាមម្តងទៀត។"
 
 #: src/features/career/offers.tsx
 msgid "Couldn't copy the questions. Select the text and copy it manually."
@@ -3518,7 +3518,7 @@ msgstr "បង្កើតប្រវត្តិរូបសង្ខេប �
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "Create account"
-msgstr ""
+msgstr "បង្កើតគណនី"
 
 #: src/features/auth/pages/consent.tsx
 msgid "Create and change your documents and job applications."
@@ -12909,7 +12909,7 @@ msgstr "អ្នកបានតាមទាន់គ្រប់យ៉ាងហ
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "You're using a guest account"
-msgstr ""
+msgstr "អ្នកកំពុងប្រើគណនីភ្ញៀវ"
 
 #. Hero headline, line 2 of 4: “Everything / you’ve done, / on one / page.”
 #: src/features/homepage/hero.tsx
@@ -13168,7 +13168,7 @@ msgstr "ការណែនាំខ្លួនរយៈពេលពីរនា
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "Your work is lost when you sign out or the session ends. Create an account or sign in to keep your resumes, cover letters and applications."
-msgstr ""
+msgstr "ការងាររបស់អ្នកនឹងបាត់បង់ នៅពេលអ្នកចាកចេញ ឬវគ្គបញ្ចប់។ បង្កើតគណនី ឬចូល ដើម្បីរក្សាប្រវត្តិរូបសង្ខេប លិខិតអម និងពាក្យសុំរបស់អ្នក។"
 
 #: src/features/homepage/sections.tsx
 msgid "Yours"

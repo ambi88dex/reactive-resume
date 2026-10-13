@@ -2892,7 +2892,7 @@ msgstr "استمر"
 
 #: src/features/auth/pages/login.tsx
 msgid "Continue as guest"
-msgstr ""
+msgstr "المتابعة كضيف"
 
 #: src/features/homepage/sections.tsx
 msgid "Contribute code"
@@ -3120,7 +3120,7 @@ msgstr "تعذر الاتصال. تحقق من المفتاح وحاول مرة 
 
 #: src/features/auth/pages/login.tsx
 msgid "Couldn't continue as a guest. Please try again."
-msgstr ""
+msgstr "تعذّرت المتابعة كضيف. يُرجى المحاولة مرة أخرى."
 
 #: src/features/career/offers.tsx
 msgid "Couldn't copy the questions. Select the text and copy it manually."
@@ -3518,7 +3518,7 @@ msgstr "أنشئ سيرة ذاتية أولاً، ثم اسأل عنها."
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "Create account"
-msgstr ""
+msgstr "إنشاء حساب"
 
 #: src/features/auth/pages/consent.tsx
 msgid "Create and change your documents and job applications."
@@ -12909,7 +12909,7 @@ msgstr "أنت مطّلع على كل شيء"
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "You're using a guest account"
-msgstr ""
+msgstr "أنت تستخدم حساب ضيف"
 
 #. Hero headline, line 2 of 4: “Everything / you’ve done, / on one / page.”
 #: src/features/homepage/hero.tsx
@@ -13168,7 +13168,7 @@ msgstr "تقديمك لنفسك في دقيقتين"
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "Your work is lost when you sign out or the session ends. Create an account or sign in to keep your resumes, cover letters and applications."
-msgstr ""
+msgstr "سيُفقد عملك عند تسجيل الخروج أو انتهاء الجلسة. أنشئ حسابًا أو سجّل الدخول للاحتفاظ بسيرك الذاتية وخطابات التقديم وطلباتك."
 
 #: src/features/homepage/sections.tsx
 msgid "Yours"

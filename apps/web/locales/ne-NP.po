@@ -2892,7 +2892,7 @@ msgstr "जारी राख्नुहोस्"
 
 #: src/features/auth/pages/login.tsx
 msgid "Continue as guest"
-msgstr ""
+msgstr "अतिथिको रूपमा जारी राख्नुहोस्"
 
 #: src/features/homepage/sections.tsx
 msgid "Contribute code"
@@ -3120,7 +3120,7 @@ msgstr "जडान गर्न सकिएन। कुञ्जी जा�
 
 #: src/features/auth/pages/login.tsx
 msgid "Couldn't continue as a guest. Please try again."
-msgstr ""
+msgstr "अतिथिको रूपमा जारी राख्न सकिएन। कृपया फेरि प्रयास गर्नुहोस्।"
 
 #: src/features/career/offers.tsx
 msgid "Couldn't copy the questions. Select the text and copy it manually."
@@ -3518,7 +3518,7 @@ msgstr "पहिले रिजुमे सिर्जना गर्नु
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "Create account"
-msgstr ""
+msgstr "खाता बनाउनुहोस्"
 
 #: src/features/auth/pages/consent.tsx
 msgid "Create and change your documents and job applications."
@@ -12909,7 +12909,7 @@ msgstr "तपाईं अद्यावधिक हुनुहुन्छ"
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "You're using a guest account"
-msgstr ""
+msgstr "तपाईं अतिथि खाता प्रयोग गर्दै हुनुहुन्छ"
 
 #. Hero headline, line 2 of 4: “Everything / you’ve done, / on one / page.”
 #: src/features/homepage/hero.tsx
@@ -13168,7 +13168,7 @@ msgstr "तपाईंको दुई मिनेटको परिचय"
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "Your work is lost when you sign out or the session ends. Create an account or sign in to keep your resumes, cover letters and applications."
-msgstr ""
+msgstr "साइन आउट गर्दा वा सत्र सकिँदा तपाईंको काम हराउनेछ। आफ्ना बायोडाटा, आवरण पत्र र आवेदनहरू राख्न खाता बनाउनुहोस् वा साइन इन गर्नुहोस्।"
 
 #: src/features/homepage/sections.tsx
 msgid "Yours"

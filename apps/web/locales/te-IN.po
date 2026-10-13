@@ -2892,7 +2892,7 @@ msgstr "కొనసాగించు"
 
 #: src/features/auth/pages/login.tsx
 msgid "Continue as guest"
-msgstr ""
+msgstr "అతిథిగా కొనసాగండి"
 
 #: src/features/homepage/sections.tsx
 msgid "Contribute code"
@@ -3120,7 +3120,7 @@ msgstr "కనెక్ట్ చేయడం సాధ్యపడలేదు.
 
 #: src/features/auth/pages/login.tsx
 msgid "Couldn't continue as a guest. Please try again."
-msgstr ""
+msgstr "అతిథిగా కొనసాగడం సాధ్యపడలేదు. దయచేసి మళ్లీ ప్రయత్నించండి."
 
 #: src/features/career/offers.tsx
 msgid "Couldn't copy the questions. Select the text and copy it manually."
@@ -3518,7 +3518,7 @@ msgstr "ముందుగా రెజ్యూమేని సృష్టి�
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "Create account"
-msgstr ""
+msgstr "ఖాతాను సృష్టించండి"
 
 #: src/features/auth/pages/consent.tsx
 msgid "Create and change your documents and job applications."
@@ -12909,7 +12909,7 @@ msgstr "అన్నీ చూసేశారు"
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "You're using a guest account"
-msgstr ""
+msgstr "మీరు అతిథి ఖాతాను ఉపయోగిస్తున్నారు"
 
 #. Hero headline, line 2 of 4: “Everything / you’ve done, / on one / page.”
 #: src/features/homepage/hero.tsx
@@ -13168,7 +13168,7 @@ msgstr "మీ రెండు నిమిషాల పరిచయం"
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "Your work is lost when you sign out or the session ends. Create an account or sign in to keep your resumes, cover letters and applications."
-msgstr ""
+msgstr "మీరు సైన్ అవుట్ చేసినప్పుడు లేదా సెషన్ ముగిసినప్పుడు మీ పని పోతుంది. మీ రిజ్యూమ్స్, కవర్ లెటర్స్ మరియు దరఖాస్తులను ఉంచుకోవడానికి ఖాతాను సృష్టించండి లేదా సైన్ ఇన్ చేయండి."
 
 #: src/features/homepage/sections.tsx
 msgid "Yours"

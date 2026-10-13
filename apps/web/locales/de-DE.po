@@ -2892,7 +2892,7 @@ msgstr "Weiter"
 
 #: src/features/auth/pages/login.tsx
 msgid "Continue as guest"
-msgstr ""
+msgstr "Als Gast fortfahren"
 
 #: src/features/homepage/sections.tsx
 msgid "Contribute code"
@@ -3120,7 +3120,7 @@ msgstr "Es konnte keine Verbindung hergestellt werden. Überprüfen Sie den Schl
 
 #: src/features/auth/pages/login.tsx
 msgid "Couldn't continue as a guest. Please try again."
-msgstr ""
+msgstr "Fortfahren als Gast nicht möglich. Bitte versuche es erneut."
 
 #: src/features/career/offers.tsx
 msgid "Couldn't copy the questions. Select the text and copy it manually."
@@ -3518,7 +3518,7 @@ msgstr "Erstellen Sie zunächst einen Lebenslauf und fragen Sie dann danach."
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "Create account"
-msgstr ""
+msgstr "Konto erstellen"
 
 #: src/features/auth/pages/consent.tsx
 msgid "Create and change your documents and job applications."
@@ -12909,7 +12909,7 @@ msgstr "Sie sind auf dem neuesten Stand"
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "You're using a guest account"
-msgstr ""
+msgstr "Du nutzt ein Gastkonto"
 
 #. Hero headline, line 2 of 4: “Everything / you’ve done, / on one / page.”
 #: src/features/homepage/hero.tsx
@@ -13168,7 +13168,7 @@ msgstr "Ihre Zwei-Minuten-Vorstellung"
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "Your work is lost when you sign out or the session ends. Create an account or sign in to keep your resumes, cover letters and applications."
-msgstr ""
+msgstr "Deine Arbeit geht verloren, wenn du dich abmeldest oder die Sitzung endet. Erstelle ein Konto oder melde dich an, um deine Lebensläufe, Anschreiben und Bewerbungen zu behalten."
 
 #: src/features/homepage/sections.tsx
 msgid "Yours"

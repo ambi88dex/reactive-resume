@@ -2892,7 +2892,7 @@ msgstr "Pokračovať"
 
 #: src/features/auth/pages/login.tsx
 msgid "Continue as guest"
-msgstr ""
+msgstr "Pokračovať ako hosť"
 
 #: src/features/homepage/sections.tsx
 msgid "Contribute code"
@@ -3120,7 +3120,7 @@ msgstr "Nepodarilo sa pripojiť. Skontrolujte kľúč a skúste to znova."
 
 #: src/features/auth/pages/login.tsx
 msgid "Couldn't continue as a guest. Please try again."
-msgstr ""
+msgstr "Nepodarilo sa pokračovať ako hosť. Skúste to znova."
 
 #: src/features/career/offers.tsx
 msgid "Couldn't copy the questions. Select the text and copy it manually."
@@ -3518,7 +3518,7 @@ msgstr "Najprv vytvorte životopis a potom sa naň pýtajte."
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "Create account"
-msgstr ""
+msgstr "Vytvoriť účet"
 
 #: src/features/auth/pages/consent.tsx
 msgid "Create and change your documents and job applications."
@@ -12909,7 +12909,7 @@ msgstr "Ste v obraze"
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "You're using a guest account"
-msgstr ""
+msgstr "Používate účet hosťa"
 
 #. Hero headline, line 2 of 4: “Everything / you’ve done, / on one / page.”
 #: src/features/homepage/hero.tsx
@@ -13168,7 +13168,7 @@ msgstr "Vaše dvojminútové predstavenie"
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "Your work is lost when you sign out or the session ends. Create an account or sign in to keep your resumes, cover letters and applications."
-msgstr ""
+msgstr "Po odhlásení alebo skončení relácie o svoju prácu prídete. Vytvorte si účet alebo sa prihláste, aby ste si životopisy, sprievodné listy a žiadosti ponechali."
 
 #: src/features/homepage/sections.tsx
 msgid "Yours"

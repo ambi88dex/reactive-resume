@@ -2892,7 +2892,7 @@ msgstr "Davom etish"
 
 #: src/features/auth/pages/login.tsx
 msgid "Continue as guest"
-msgstr ""
+msgstr "Mehmon sifatida davom etish"
 
 #: src/features/homepage/sections.tsx
 msgid "Contribute code"
@@ -3120,7 +3120,7 @@ msgstr "Ulanib bo‘lmadi. Kalitni tekshiring va qayta urinib ko'ring."
 
 #: src/features/auth/pages/login.tsx
 msgid "Couldn't continue as a guest. Please try again."
-msgstr ""
+msgstr "Mehmon sifatida davom etib boʻlmadi. Qayta urinib koʻring."
 
 #: src/features/career/offers.tsx
 msgid "Couldn't copy the questions. Select the text and copy it manually."
@@ -3518,7 +3518,7 @@ msgstr "Avval rezyume yarating, keyin bu haqda so'rang."
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "Create account"
-msgstr ""
+msgstr "Hisob yaratish"
 
 #: src/features/auth/pages/consent.tsx
 msgid "Create and change your documents and job applications."
@@ -12909,7 +12909,7 @@ msgstr "Yangi narsa yo'q"
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "You're using a guest account"
-msgstr ""
+msgstr "Siz mehmon hisobidan foydalanyapsiz"
 
 #. Hero headline, line 2 of 4: “Everything / you’ve done, / on one / page.”
 #: src/features/homepage/hero.tsx
@@ -13168,7 +13168,7 @@ msgstr "Ikki daqiqalik o'zingizni tanishtirish"
 
 #: src/features/auth/components/guest-banner.tsx
 msgid "Your work is lost when you sign out or the session ends. Create an account or sign in to keep your resumes, cover letters and applications."
-msgstr ""
+msgstr "Tizimdan chiqqaningizda yoki seans tugaganda ishingiz yoʻqoladi. Rezyumelar, muqova xatlari va arizalaringizni saqlab qolish uchun hisob yarating yoki tizimga kiring."
 
 #: src/features/homepage/sections.tsx
 msgid "Yours"
