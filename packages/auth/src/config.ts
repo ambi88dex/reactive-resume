@@ -434,9 +434,8 @@ const getAuthConfig = () => {
 			anonymous({
 				emailDomainName: "reactive-resume.local",
 				generateName: () => "Guest",
-				// The guest account is kept: anything not moved here (uploads, career data) stays with it, never deleted.
-				disableDeleteAnonymousUser: true,
-				// Signing up or in from a guest session moves the guest's documents to that account.
+				// Signing up or in from a guest session moves the guest's documents to that account; the plugin then
+				// deletes the guest account, along with anything not moved here (assistant threads, career data).
 				onLinkAccount: async ({ anonymousUser, newUser }) => {
 					const from = anonymousUser.user.id;
 					const to = newUser.user.id;
