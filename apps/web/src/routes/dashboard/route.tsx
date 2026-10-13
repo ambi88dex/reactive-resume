@@ -1,11 +1,13 @@
-import { createFileRoute, Outlet } from "@tanstack/react-router";
+import { createFileRoute, Outlet, redirect } from "@tanstack/react-router";
 import { AppShell } from "./-components/app-shell";
-import { requireSession } from "@/libs/auth/require-session";
 import { createNoindexFollowMeta } from "@/libs/seo";
 
 export const Route = createFileRoute("/dashboard")({
 	component: RouteComponent,
-	beforeLoad: ({ context, location }) => requireSession(context, location),
+	beforeLoad: ({ context, location }) => {
+		if (!context.session) throw redirect({ to: "/auth/login", search: { callbackURL: location.href }, replace: true });
+		return { session: context.session };
+	},
 	head: () => ({
 		meta: [createNoindexFollowMeta()],
 	}),

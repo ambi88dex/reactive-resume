@@ -2890,6 +2890,10 @@ msgstr "មាតិកាត្រូវបានរៀបចំតាមទម
 msgid "Continue"
 msgstr "បន្ត"
 
+#: src/features/auth/pages/login.tsx
+msgid "Continue as guest"
+msgstr ""
+
 #: src/features/homepage/sections.tsx
 msgid "Contribute code"
 msgstr "ចូលរួមចំណែកកូដ"
@@ -3113,6 +3117,10 @@ msgstr "មិនអាចផ្លាស់ប្តូរកាលវិភា
 #: src/features/assistant/provider-setup.tsx
 msgid "Couldn't connect. Check the key and try again."
 msgstr "មិនអាចភ្ជាប់បានទេ។ ពិនិត្យសោ ហើយព្យាយាមម្តងទៀត។"
+
+#: src/features/auth/pages/login.tsx
+msgid "Couldn't continue as a guest. Please try again."
+msgstr ""
 
 #: src/features/career/offers.tsx
 msgid "Couldn't copy the questions. Select the text and copy it manually."
@@ -3507,6 +3515,10 @@ msgstr "បង្កើត​ប្រវត្តិរូប​ថ្មី"
 #: src/features/command-palette/pages/ask.tsx
 msgid "Create a resume first, then ask about it."
 msgstr "បង្កើតប្រវត្តិរូបសង្ខេប បន្ទាប់មកសួរអំពីវា។"
+
+#: src/features/auth/components/guest-banner.tsx
+msgid "Create account"
+msgstr ""
 
 #: src/features/auth/pages/consent.tsx
 msgid "Create and change your documents and job applications."
@@ -10121,6 +10133,7 @@ msgid "Sidebars are often read last, or mixed into the main column."
 msgstr "របារចំហៀងត្រូវបានអានជាញឹកញយ ឬលាយបញ្ចូលទៅក្នុងជួរឈរមេ។"
 
 #. Primary action button label on login form
+#: src/features/auth/components/guest-banner.tsx
 #: src/features/auth/pages/login.tsx
 msgid "Sign in"
 msgstr "ចូល"
@@ -10341,6 +10354,7 @@ msgid "Some text is rotated."
 msgstr "អត្ថបទខ្លះត្រូវបានបង្វិល។"
 
 #: src/components/layout/error-screen.tsx
+#: src/features/resume/preview/preview.browser.tsx
 msgid "Something went wrong"
 msgstr "មានអ្វីមួយខុសប្រក្រតី"
 
@@ -11727,6 +11741,7 @@ msgstr "សាកល្បងគំរូមួយ។"
 #: src/features/career/workspace/shell.tsx
 #: src/features/documents/library-error.tsx
 #: src/features/resume/editor/write/improve.tsx
+#: src/features/resume/preview/preview.browser.tsx
 #: src/features/resume/share/download-tab.tsx
 #: src/features/settings/ai/web-access.tsx
 #: src/features/settings/integrations/ai-provider-load-state.tsx
@@ -12892,6 +12907,10 @@ msgstr "អ្នកគ្មានអ៊ីនធឺណិតទេ។ ភ្�
 msgid "You're up to date"
 msgstr "អ្នកបានតាមទាន់គ្រប់យ៉ាងហើយ"
 
+#: src/features/auth/components/guest-banner.tsx
+msgid "You're using a guest account"
+msgstr ""
+
 #. Hero headline, line 2 of 4: “Everything / you’ve done, / on one / page.”
 #: src/features/homepage/hero.tsx
 msgid "you’ve done,"
@@ -13146,6 +13165,10 @@ msgstr "វេនរបស់អ្នក។"
 #: src/features/career/workspace/prepare.tsx
 msgid "Your two-minute introduction"
 msgstr "ការណែនាំខ្លួនរយៈពេលពីរនាទីរបស់អ្នក"
+
+#: src/features/auth/components/guest-banner.tsx
+msgid "Your work is lost when you sign out or the session ends. Create an account or sign in to keep your resumes, cover letters and applications."
+msgstr ""
 
 #: src/features/homepage/sections.tsx
 msgid "Yours"

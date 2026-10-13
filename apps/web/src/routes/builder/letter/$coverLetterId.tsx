@@ -1,13 +1,12 @@
 import { t } from "@lingui/core/macro";
 import { useQueryClient, useSuspenseQuery } from "@tanstack/react-query";
-import { createFileRoute, useBlocker } from "@tanstack/react-router";
+import { createFileRoute, redirect, useBlocker } from "@tanstack/react-router";
 import { useEffect } from "react";
 import z from "zod";
 import { toast } from "@reactive-resume/ui/components/toast";
 import { LetterShell } from "./-components/letter-shell";
 import { letterWordsQueryOptions } from "@/features/letters/compose";
 import { useLetterEditorStore } from "@/features/letters/store";
-import { requireSession } from "@/libs/auth/require-session";
 import { orpc } from "@/libs/orpc/client";
 import { createNoindexFollowMeta } from "@/libs/seo";
 
@@ -25,7 +24,10 @@ const searchSchema = z.object({
 export const Route = createFileRoute("/builder/letter/$coverLetterId")({
 	component: RouteComponent,
 	validateSearch: searchSchema,
-	beforeLoad: ({ context, location }) => requireSession(context, location),
+	beforeLoad: ({ context, location }) => {
+		if (!context.session) throw redirect({ to: "/auth/login", search: { callbackURL: location.href }, replace: true });
+		return { session: context.session };
+	},
 	loader: async ({ params, context }) => {
 		// Always fetched fresh: linked details come from the resume as it reads now.
 		const letter = await context.queryClient.fetchQuery({

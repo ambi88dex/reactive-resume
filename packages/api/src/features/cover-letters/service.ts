@@ -299,7 +299,7 @@ export const coverLetterService = {
 		});
 		return resolveLinks(letter, input.userId);
 	},
-	update: async (input: CoverLetterUpdateInput & { userId: string; isAnonymous?: boolean }) => {
+	update: async (input: CoverLetterUpdateInput & { userId: string }) => {
 		const changes: Partial<typeof schema.coverLetter.$inferInsert> = {};
 		const stored = await getRow(input);
 
@@ -371,13 +371,11 @@ export const coverLetterService = {
 					})),
 			input.userId,
 		);
-		if (!input.isAnonymous) {
-			await saveLetterSessionVersion({
-				letter: updated,
-				userId: input.userId,
-				...(input.sessionId ? { sessionId: input.sessionId } : {}),
-			});
-		}
+		await saveLetterSessionVersion({
+			letter: updated,
+			userId: input.userId,
+			...(input.sessionId ? { sessionId: input.sessionId } : {}),
+		});
 		return updated;
 	},
 	refreshStyle: async (input: RevisionInput & { resumeId: string }) => {

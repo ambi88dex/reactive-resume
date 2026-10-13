@@ -2,9 +2,9 @@ import type { QueryClient } from "@tanstack/react-query";
 import { t } from "@lingui/core/macro";
 import { Trans } from "@lingui/react/macro";
 import { useSelector } from "@tanstack/react-form";
-import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { Link, useNavigate, useRouter, useSearch } from "@tanstack/react-router";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import z from "zod";
 import { Button } from "@reactive-resume/ui/components/button";
 import { FormControl, FormDescription, FormItem, FormLabel, FormMessage } from "@reactive-resume/ui/components/form";
@@ -27,7 +27,7 @@ const formSchema = z.object({
 type Props = {
 	disableEmailAuth: boolean;
 	disableSignups: boolean;
-	allowGuestLogin?: boolean;
+	allowGuestLogin: boolean;
 };
 
 type SubmitLoginOptions = {
@@ -93,7 +93,7 @@ async function submitLogin({ value, callbackURL, reauthenticate, navigate, query
 	}
 }
 
-export function LoginPage({ disableEmailAuth, disableSignups, allowGuestLogin = false }: Props) {
+export function LoginPage({ disableEmailAuth, disableSignups, allowGuestLogin }: Props) {
 	const router = useRouter();
 	const { callbackURL, reauthenticate } = useSearch({ from: "/auth" });
 	const navigate = useNavigate();
@@ -112,28 +112,18 @@ export function LoginPage({ disableEmailAuth, disableSignups, allowGuestLogin = 
 	});
 
 	const isSubmitting = useSelector(form.store, (state) => state.isSubmitting);
-	const [isGuestSubmitting, setIsGuestSubmitting] = useState(false);
 
-	const signInAsGuest = async () => {
-		setIsGuestSubmitting(true);
-		try {
+	const guestSignIn = useMutation({
+		mutationFn: async () => {
 			const { error } = await authClient.signIn.anonymous();
-			if (error) {
-				toast.add({
-					type: "error",
-					description: error.message || t`Failed to start a guest session. Please try again.`,
-				});
-				return;
-			}
+			if (error) throw new Error(error.message);
 			await queryClient.invalidateQueries({ queryKey: sessionQueryKey });
 			await router.invalidate();
 			void navigate(getAuthRedirectOptions(callbackURL));
-		} catch {
-			toast.add({ type: "error", description: t`Failed to start a guest session. Please try again.` });
-		} finally {
-			setIsGuestSubmitting(false);
-		}
-	};
+		},
+		onError: (error) =>
+			toast.add({ type: "error", description: error.message || t`Couldn't continue as a guest. Please try again.` }),
+	});
 
 	useEffect(() => {
 		if (!("passkey" in providers)) return;
@@ -274,8 +264,8 @@ export function LoginPage({ disableEmailAuth, disableSignups, allowGuestLogin = 
 					type="button"
 					variant="secondary"
 					className="w-full"
-					disabled={isGuestSubmitting}
-					onClick={signInAsGuest}
+					loading={guestSignIn.isPending}
+					onClick={() => guestSignIn.mutate()}
 				>
 					<Trans>Continue as guest</Trans>
 				</Button>

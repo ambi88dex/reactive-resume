@@ -12,7 +12,7 @@ import { admin, anonymous, jwt, openAPI } from "better-auth/plugins";
 import { genericOAuth } from "better-auth/plugins/generic-oauth";
 import { twoFactor } from "better-auth/plugins/two-factor";
 import { username } from "better-auth/plugins/username";
-import { and, eq, gt } from "drizzle-orm";
+import { and, eq, gt, sql } from "drizzle-orm";
 import { createLocalJWKSet, jwtVerify } from "jose";
 import { createElement } from "react";
 import { db } from "@reactive-resume/db/client";
@@ -187,17 +187,11 @@ const getAuthConfig = () => {
 		databaseHooks: {
 			user: {
 				create: {
+					// Guests sign in without a username. The tail of a UUIDv7 is random; its head is a timestamp.
 					before: (user) => {
-						if (user.username) return Promise.resolve(undefined);
-						const id = generateId().slice(0, 8).toLowerCase();
-						const guestUsername = `guest-${id}`;
-						return Promise.resolve({
-							data: {
-								...user,
-								username: guestUsername,
-								displayUsername: guestUsername,
-							},
-						});
+						if (!user.isAnonymous) return Promise.resolve(undefined);
+						const username = `guest-${generateId().slice(-12)}`;
+						return Promise.resolve({ data: { ...user, username, displayUsername: username } });
 					},
 				},
 			},
@@ -205,7 +199,7 @@ const getAuthConfig = () => {
 
 		hooks: {
 			before: createAuthMiddleware(async (ctx) => {
-				if (ctx.path === "/sign-in/anonymous" && env.FLAG_DISABLE_GUEST_LOGIN) {
+				if (ctx.path === "/sign-in/anonymous" && (!env.FLAG_ENABLE_GUEST_LOGIN || env.FLAG_DISABLE_SIGNUPS)) {
 					throw new APIError("FORBIDDEN", { message: "Guest login is disabled." });
 				}
 				if (ctx.path === "/oauth2/delete-consent") {
@@ -329,12 +323,6 @@ const getAuthConfig = () => {
 					type: "string",
 					required: true,
 				},
-				isAnonymous: {
-					type: "boolean",
-					required: false,
-					defaultValue: false,
-					input: false,
-				},
 				timezone: {
 					type: "string",
 					required: false,
@@ -446,20 +434,30 @@ const getAuthConfig = () => {
 			anonymous({
 				emailDomainName: "reactive-resume.local",
 				generateName: () => "Guest",
+				// The guest account is kept: anything not moved here (uploads, career data) stays with it, never deleted.
+				disableDeleteAnonymousUser: true,
+				// Signing up or in from a guest session moves the guest's documents to that account.
 				onLinkAccount: async ({ anonymousUser, newUser }) => {
-					const anonUserId = anonymousUser.user.id;
-					const newUserId = newUser.user.id;
-					if (anonUserId === newUserId) return;
-
-					await db.update(schema.resume).set({ userId: newUserId }).where(eq(schema.resume.userId, anonUserId));
-					await db
-						.update(schema.coverLetter)
-						.set({ userId: newUserId })
-						.where(eq(schema.coverLetter.userId, anonUserId));
-					await db
-						.update(schema.application)
-						.set({ userId: newUserId })
-						.where(eq(schema.application.userId, anonUserId));
+					const from = anonymousUser.user.id;
+					const to = newUser.user.id;
+					await db.transaction(async (tx) => {
+						// An existing account may already use a slug; suffix the guest's copy to keep (user, slug) unique.
+						await tx
+							.update(schema.resume)
+							.set({
+								userId: to,
+								slug: sql`case when exists (select 1 from resume r where r.user_id = ${to} and r.slug = resume.slug) then resume.slug || '-' || right(resume.id, 6) else resume.slug end`,
+							})
+							.where(eq(schema.resume.userId, from));
+						for (const table of [
+							schema.resumeVersion,
+							schema.coverLetter,
+							schema.coverLetterVersion,
+							schema.application,
+						]) {
+							await tx.update(table).set({ userId: to }).where(eq(table.userId, from));
+						}
+					});
 				},
 			}),
 			...(env.BETTER_AUTH_API_KEY

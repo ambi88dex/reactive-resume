@@ -29,7 +29,7 @@ describe("auth initialization lifecycle", () => {
 	it("does not construct auth during module import", async () => {
 		await import("./config");
 		expect(mocks.betterAuth).not.toHaveBeenCalled();
-	}, 15_000);
+	});
 
 	it("propagates transient initialization failure and rebuilds on the next call", async () => {
 		const failure = new Error("Connection terminated due to connection timeout");

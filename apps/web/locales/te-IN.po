@@ -2890,6 +2890,10 @@ msgstr "కంటెంట్ గ్రిడ్‌లో అమర్చబడ�
 msgid "Continue"
 msgstr "కొనసాగించు"
 
+#: src/features/auth/pages/login.tsx
+msgid "Continue as guest"
+msgstr ""
+
 #: src/features/homepage/sections.tsx
 msgid "Contribute code"
 msgstr "కోడ్ అందించండి"
@@ -3113,6 +3117,10 @@ msgstr "ఈ షెడ్యూల్‌ను మార్చడం సాధ్
 #: src/features/assistant/provider-setup.tsx
 msgid "Couldn't connect. Check the key and try again."
 msgstr "కనెక్ట్ చేయడం సాధ్యపడలేదు. కీని తనిఖీ చేసి, మళ్లీ ప్రయత్నించండి."
+
+#: src/features/auth/pages/login.tsx
+msgid "Couldn't continue as a guest. Please try again."
+msgstr ""
 
 #: src/features/career/offers.tsx
 msgid "Couldn't copy the questions. Select the text and copy it manually."
@@ -3507,6 +3515,10 @@ msgstr "కొత్త రిజ్యూమ్ సృష్టించండ�
 #: src/features/command-palette/pages/ask.tsx
 msgid "Create a resume first, then ask about it."
 msgstr "ముందుగా రెజ్యూమేని సృష్టించండి, ఆపై దాని గురించి అడగండి."
+
+#: src/features/auth/components/guest-banner.tsx
+msgid "Create account"
+msgstr ""
 
 #: src/features/auth/pages/consent.tsx
 msgid "Create and change your documents and job applications."
@@ -10121,6 +10133,7 @@ msgid "Sidebars are often read last, or mixed into the main column."
 msgstr "సైడ్‌బార్లు తరచుగా చివరిగా చదవబడతాయి లేదా ప్రధాన కాలమ్‌లో కలపబడతాయి."
 
 #. Primary action button label on login form
+#: src/features/auth/components/guest-banner.tsx
 #: src/features/auth/pages/login.tsx
 msgid "Sign in"
 msgstr "సైన్ ఇన్ చేయండి"
@@ -10341,6 +10354,7 @@ msgid "Some text is rotated."
 msgstr "కొంత టెక్స్ట్ తిప్పబడింది."
 
 #: src/components/layout/error-screen.tsx
+#: src/features/resume/preview/preview.browser.tsx
 msgid "Something went wrong"
 msgstr "ఏదో తప్పు జరిగింది"
 
@@ -11727,6 +11741,7 @@ msgstr "నమూనా ప్రయత్నించండి"
 #: src/features/career/workspace/shell.tsx
 #: src/features/documents/library-error.tsx
 #: src/features/resume/editor/write/improve.tsx
+#: src/features/resume/preview/preview.browser.tsx
 #: src/features/resume/share/download-tab.tsx
 #: src/features/settings/ai/web-access.tsx
 #: src/features/settings/integrations/ai-provider-load-state.tsx
@@ -12892,6 +12907,10 @@ msgstr "మీరు ఆఫ్‌లైన్‌లో ఉన్నారు. �
 msgid "You're up to date"
 msgstr "అన్నీ చూసేశారు"
 
+#: src/features/auth/components/guest-banner.tsx
+msgid "You're using a guest account"
+msgstr ""
+
 #. Hero headline, line 2 of 4: “Everything / you’ve done, / on one / page.”
 #: src/features/homepage/hero.tsx
 msgid "you’ve done,"
@@ -13146,6 +13165,10 @@ msgstr "మీ వంతు"
 #: src/features/career/workspace/prepare.tsx
 msgid "Your two-minute introduction"
 msgstr "మీ రెండు నిమిషాల పరిచయం"
+
+#: src/features/auth/components/guest-banner.tsx
+msgid "Your work is lost when you sign out or the session ends. Create an account or sign in to keep your resumes, cover letters and applications."
+msgstr ""
 
 #: src/features/homepage/sections.tsx
 msgid "Yours"

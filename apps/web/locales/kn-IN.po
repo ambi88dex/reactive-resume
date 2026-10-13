@@ -2890,6 +2890,10 @@ msgstr "ವಿಷಯವನ್ನು ಗ್ರಿಡ್‌ನಲ್ಲಿ ಜೋ�
 msgid "Continue"
 msgstr "ಮುಂದುವರಿಸಿ"
 
+#: src/features/auth/pages/login.tsx
+msgid "Continue as guest"
+msgstr ""
+
 #: src/features/homepage/sections.tsx
 msgid "Contribute code"
 msgstr "ಕೋಡ್ ಕೊಡುಗೆ ನೀಡಿ"
@@ -3113,6 +3117,10 @@ msgstr "ಈ ವೇಳಾಪಟ್ಟಿಯನ್ನು ಬದಲಾಯಿಸಲ�
 #: src/features/assistant/provider-setup.tsx
 msgid "Couldn't connect. Check the key and try again."
 msgstr "ಸಂಪರ್ಕಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ಕೀಲಿಯನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ."
+
+#: src/features/auth/pages/login.tsx
+msgid "Couldn't continue as a guest. Please try again."
+msgstr ""
 
 #: src/features/career/offers.tsx
 msgid "Couldn't copy the questions. Select the text and copy it manually."
@@ -3507,6 +3515,10 @@ msgstr "ಹೊಸ ರೆಸ್ಯೂಮ್ ಅನ್ನು ರಚಿಸಿ"
 #: src/features/command-palette/pages/ask.tsx
 msgid "Create a resume first, then ask about it."
 msgstr "ಮೊದಲು ರೆಸ್ಯೂಮೆ ರಚಿಸಿ, ನಂತರ ಅದರ ಬಗ್ಗೆ ಕೇಳಿ."
+
+#: src/features/auth/components/guest-banner.tsx
+msgid "Create account"
+msgstr ""
 
 #: src/features/auth/pages/consent.tsx
 msgid "Create and change your documents and job applications."
@@ -10121,6 +10133,7 @@ msgid "Sidebars are often read last, or mixed into the main column."
 msgstr "ಸೈಡ್‌ಬಾರ್‌ಗಳನ್ನು ಸಾಮಾನ್ಯವಾಗಿ ಕೊನೆಯದಾಗಿ ಓದಲಾಗುತ್ತದೆ ಅಥವಾ ಮುಖ್ಯ ಕಾಲಮ್‌ಗೆ ಬೆರೆಸಲಾಗುತ್ತದೆ."
 
 #. Primary action button label on login form
+#: src/features/auth/components/guest-banner.tsx
 #: src/features/auth/pages/login.tsx
 msgid "Sign in"
 msgstr "ಸೈನ್ ಇನ್ ಮಾಡಿ"
@@ -10341,6 +10354,7 @@ msgid "Some text is rotated."
 msgstr "ಕೆಲವು ಪಠ್ಯ ತಿರುಗಿಸಲ್ಪಟ್ಟಿದೆ."
 
 #: src/components/layout/error-screen.tsx
+#: src/features/resume/preview/preview.browser.tsx
 msgid "Something went wrong"
 msgstr "ಏನೋ ತಪ್ಪಾಗಿದೆ."
 
@@ -11727,6 +11741,7 @@ msgstr "ಮಾದರಿಯನ್ನು ಪ್ರಯತ್ನಿಸಿ"
 #: src/features/career/workspace/shell.tsx
 #: src/features/documents/library-error.tsx
 #: src/features/resume/editor/write/improve.tsx
+#: src/features/resume/preview/preview.browser.tsx
 #: src/features/resume/share/download-tab.tsx
 #: src/features/settings/ai/web-access.tsx
 #: src/features/settings/integrations/ai-provider-load-state.tsx
@@ -12892,6 +12907,10 @@ msgstr "ನೀವು ಆಫ್‌ಲೈನ್‌ನಲ್ಲಿರುವಿರ�
 msgid "You're up to date"
 msgstr "ನೀವು ಎಲ್ಲವನ್ನೂ ನೋಡಿದ್ದೀರಿ"
 
+#: src/features/auth/components/guest-banner.tsx
+msgid "You're using a guest account"
+msgstr ""
+
 #. Hero headline, line 2 of 4: “Everything / you’ve done, / on one / page.”
 #: src/features/homepage/hero.tsx
 msgid "you’ve done,"
@@ -13146,6 +13165,10 @@ msgstr "ನಿಮ್ಮ ಸರದಿ"
 #: src/features/career/workspace/prepare.tsx
 msgid "Your two-minute introduction"
 msgstr "ನಿಮ್ಮ ಎರಡು ನಿಮಿಷಗಳ ಪರಿಚಯ"
+
+#: src/features/auth/components/guest-banner.tsx
+msgid "Your work is lost when you sign out or the session ends. Create an account or sign in to keep your resumes, cover letters and applications."
+msgstr ""
 
 #: src/features/homepage/sections.tsx
 msgid "Yours"

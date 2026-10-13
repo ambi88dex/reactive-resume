@@ -11,7 +11,6 @@ import { env } from "@reactive-resume/env/server";
 export type RequestPermission = "read" | "write" | "delete";
 export type RequestAuthentication = {
 	user: User;
-	isAnonymous?: boolean;
 	method: "apiKey" | "bearer" | "session";
 	permissions: readonly RequestPermission[];
 };
@@ -28,7 +27,7 @@ interface ORPCContext {
 const TRUSTED_ORIGINS = getTrustedOrigins(env.APP_URL);
 const fullPermissions: readonly RequestPermission[] = ["read", "write", "delete"];
 
-async function findActiveUser(id: string): Promise<typeof user.$inferSelect | null> {
+async function findActiveUser(id: string): Promise<User | null> {
 	const [result] = await db.select().from(user).where(eq(user.id, id)).limit(1);
 	if (!result || (result.banned && (!result.banExpires || result.banExpires > new Date()))) return null;
 	return result;
@@ -49,7 +48,7 @@ async function getAuthenticationFromBearerToken(headers: Headers): Promise<Reque
 		const permissions = explicitPermissions.length
 			? fullPermissions.filter((permission) => scopes.includes(`api:${permission}`))
 			: fullPermissions;
-		return { user: result, isAnonymous: result.isAnonymous, method: "bearer", permissions };
+		return { user: result, method: "bearer", permissions };
 	} catch {
 		return null;
 	}
@@ -67,7 +66,7 @@ async function getAuthenticationFromApiKey(apiKey: string): Promise<RequestAuthe
 			statements == null
 				? fullPermissions
 				: fullPermissions.filter((permission) => Array.isArray(apiPermissions) && apiPermissions.includes(permission));
-		return { user: activeUser, isAnonymous: activeUser.isAnonymous, method: "apiKey", permissions };
+		return { user: activeUser, method: "apiKey", permissions };
 	} catch {
 		return null;
 	}
@@ -97,9 +96,7 @@ export async function resolveAuthenticationFromRequestHeaders(headers: Headers):
 		const result = await auth.api.getSession({ headers: sessionHeaders, query: { disableCookieCache: true } });
 		if (!result?.user) return null;
 		const activeUser = await findActiveUser(result.user.id);
-		return activeUser
-			? { user: activeUser, isAnonymous: activeUser.isAnonymous, method: "session", permissions: fullPermissions }
-			: null;
+		return activeUser ? { user: activeUser, method: "session", permissions: fullPermissions } : null;
 	} catch {
 		return null;
 	}
@@ -124,7 +121,6 @@ export const publicProcedure = base
 				...context,
 				authentication,
 				user: authentication?.user ?? null,
-				isAnonymous: authentication?.isAnonymous ?? false,
 			},
 		});
 	});
